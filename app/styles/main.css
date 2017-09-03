@@ -98,17 +98,26 @@ body {
   content: 'low stock!';
   text-align: center;
   transform: rotate(45deg);
-  position: absolute;
+  //position: absolute;
   height: 1.5em;
   width: 10em;
-  top: 2.3em;
-  right: -2.5em;
+  //top: 2.3em;
+  //right: -2.5em;
+  top:1px;
 }
 
 .coming-soon {
   color: rgb(184, 161, 7);
   font-style: italic;
   text-shadow: 1px 1px white;
+}
+
+.brick
+{
+	width: 150px;
+	height: 150px;
+	background-color: grey;
+	margin: 5px;
 }
 
 .footer:hover .glyphicon-heart::before {

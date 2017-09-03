@@ -1,0 +1,24 @@
+<div>
+	<h1 id="storeHeading">{{store.name}}</h1>
+	<h4 id="brickColors">We carry {{store.brickColors.length}} colors of bricks!</h2>
+	<div>{{Object.toString()}}</div>
+	<div id="colorList" ng-repeat="color in store.brickColors" >
+		<div ng-if="store.bricks[color]" id="color-{{color}}">{{color}}:
+				<div ng-repeat="(size,brick) in store.bricks[color]">
+				<div class="brick brick-{{size}}" id="brick-{{size}}" ng-class="[ brick.quantity < 10? 'low-stock' : '']">
+				<ul>
+				<li ng-if="brick.quantity < 5" class="coming-soon">Coming Soon!</li>
+				<li>size: {{size}}</li>
+				<li>quantity: {{brick.quantity}}</li>
+				<li>price: ${{brick.price}}</li>
+				<li ng-bind="Message"></li>
+				<ul>
+				<input type="button" value = "Buy" class="buyButton" id="buyButton" onclick="alert('onclick')" ng-click="alert('ngclick')"></input>
+				<button class="returnButton" id="returnButton">Return</button>
+				<span ng-bind="Message"></span>
+				</div>
+				</div>				
+		</div>
+		
+	</div>
+</div>

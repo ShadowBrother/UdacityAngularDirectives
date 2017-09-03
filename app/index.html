@@ -47,10 +47,15 @@
     </div>
   </div>
 
+  
   <div class="container">
     <div ng-include="'views/instructions.html'"></div>
   </div>
-
+  
+  <div class="container">
+	<div ng-controller="legoStore as store" ng-include="'views/storeFront.html'"></div>
+  </div>
+  
   <div class="footer">
     <div class="container">
       <p><span class="glyphicon glyphicon-heart"></span> from Udacity</p>
