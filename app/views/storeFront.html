@@ -11,11 +11,11 @@
 				<li>size: {{size}}</li>
 				<li>quantity: {{brick.quantity}}</li>
 				<li>price: ${{brick.price}}</li>
-				<li ng-bind="Message"></li>
+				<li ng-bind="store.Message">message</li>
 				<ul>
-				<input type="button" value = "Buy" class="buyButton" id="buyButton" onclick="alert('onclick')" ng-click="alert('ngclick')"></input>
-				<button class="returnButton" id="returnButton">Return</button>
-				<span ng-bind="Message"></span>
+				<input type="button" value = "Buy" class="buyButton" id="buyButton" ng-click="store.buy(color, size, brick)"></input>
+				<button class="returnButton" id="returnButton" ng-click="store.return(brick)">Return</button>
+				
 				</div>
 				</div>				
 		</div>

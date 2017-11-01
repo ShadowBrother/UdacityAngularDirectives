@@ -48,19 +48,22 @@ angular.module('directivesQuizApp')
         }
       }
     };
-	this.buy = function()
+	this.buy = function(color, size, brick)
 	{
-		this.Message = "buy";
-		this.bricks.Red['1x1']['quantity']--;
-		console.log("buy");
-		event.target.html("bought");
-		brick.quantity--;
+		this.Message = brick;
+		//this.bricks.Red['1x1']['quantity']--;
+		
+		this.bricks[color][size]['quantity']--;
+		
+		//if(brick.quantity > 0) brick.quantity--;
 	};
 	this.return = function(brick)
 	{
+		this.Message = brick;
 		brick.quantity++;
 	};
-	this.Message = "";
+	this.Message = "msg";
+	
   });
 
   
