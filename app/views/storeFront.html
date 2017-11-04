@@ -11,9 +11,8 @@
 				<li>size: {{size}}</li>
 				<li>quantity: {{brick.quantity}}</li>
 				<li>price: ${{brick.price}}</li>
-				<li ng-bind="store.Message">message</li>
-				<ul>
-				<input type="button" value = "Buy" class="buyButton" id="buyButton" ng-click="store.buy(color, size, brick)"></input>
+				</ul>
+				<button class="buyButton" id="buyButton" ng-click="store.buy(color, size, brick)">Buy</button>
 				<button class="returnButton" id="returnButton" ng-click="store.return(brick)">Return</button>
 				
 				</div>
